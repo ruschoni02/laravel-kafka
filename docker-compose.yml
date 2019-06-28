@@ -1,0 +1,11 @@
+version: "2.0"
+
+services:
+
+  php-cli:
+    build: docker/php-cli
+    container_name: docker-laravel-kafka-php-cli
+    working_dir: /application
+    volumes:
+      - .:/application
+    entrypoint: tail -f /dev/null
